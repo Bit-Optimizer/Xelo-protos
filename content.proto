@@ -1,10 +1,10 @@
 syntax = "proto3";
 package protos;
-
+option go_package = "./protos/pb";
 import "utils.proto";
 import "google/protobuf/timestamp.proto";
 
-message Spec {
+message Spec{
     string key = 1;
     string value = 2;
 }
@@ -29,7 +29,7 @@ message Product
     repeated Spec spec = 9;
     repeated string photourl = 10;
     google.protobuf.Timestamp mfdate  = 11;
-    repeated string likes = 14;
+    repeated string likes = 15;
 }
 
 message CreateProductRequest {
@@ -79,6 +79,7 @@ message FilterRequest {
     string category = 4;
     string subcategory = 5;
     repeated string brand = 6;
+    Address address = 7;
 }
 
 message SearchRequest {
