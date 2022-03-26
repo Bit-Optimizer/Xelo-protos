@@ -1,8 +1,9 @@
 syntax = "proto3";
 package protos;
-
+option go_package = "./protos/pb";
 import "utils.proto";
 import "google/protobuf/timestamp.proto";
+
 
 message Spec{
     string key = 1;
@@ -79,8 +80,7 @@ message FilterRequest{
     string category = 4;
     string subcategory = 5;
     repeated string brand = 6;
-
-
+    Address address = 7;
 }
 message SearchRequest{
     string val = 1;

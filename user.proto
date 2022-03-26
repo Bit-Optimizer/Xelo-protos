@@ -1,6 +1,6 @@
 syntax = "proto3";
 package protos;
-
+option go_package = "./protos/pb";
 import "utils.proto";
 
 message User {
