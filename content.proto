@@ -21,8 +21,8 @@ message Product
     Address address = 5;
     string seller = 6;
     enum Status {
-        SOLD = 1;
-        UNSOLD = 2;
+        SOLD = 0;
+        UNSOLD = 1;
     }
     Status status = 7;
     google.protobuf.Timestamp uploadDate  = 8;
@@ -52,8 +52,8 @@ message UpdateProductRequest {
     string description = 4;
     Address address = 5;
     enum Status{
-        SOLD = 1;
-        UNSOLD = 2;
+        SOLD = 0;
+        UNSOLD = 1;
     }
     Status status = 7;
     repeated Spec spec = 9;
